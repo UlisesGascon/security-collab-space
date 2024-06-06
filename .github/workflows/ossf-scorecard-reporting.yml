@@ -31,7 +31,7 @@ jobs:
           issue-title: "OpenSSF Scorecard Report updated!"
           max-request-in-parallel: 10
           discovery-enabled: true
-          discovery-orgs: 'appium,fastify,globalizejs,gruntjs,interledgerjs,theintern,NativeScript,jestjs,marko-js,jerryscript-project,loopbackio,lodash,messageformat,mochajs,moment,node-red,nvm-sh,webdriverio,qunitjs,webhintio,ajv-validator,eslint,keplergl,visgl,ampproject,architect,dojo,nodejs,webpack,jquery,electron,expressjs,pillarjs,jshttp'
+          discovery-orgs: 'ajv-validator,ampproject,appium,architect,dojo,electron,eslint,expressjs,fastify,globalizejs,gruntjs,interledgerjs,jerryscript-project,jestjs,jquery,jshttp,keplergl,lodash,loopbackio,marko-js,messageformat,mochajs,moment,nativescript,node-red,nodejs,nvm-sh,pillarjs,qunitjs,theintern,visgl,webdriverio,webhintio,webpack'
           report-tags-enabled: true
           # The token is needed to create issues, discovery mode and pushing changes in files
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -44,7 +44,8 @@ jobs:
             commit-message: 'docs: OpenSSF Scorecard Report updated'
             title: OpenSSF Scorecard Report updated
             body: 'OpenSSF Scorecard Report updated.'
+            # The person who triggered the workflow will be the assignee
             assignees: ${{ github.actor }}
-            labels: security-wg-agenda
+            labels: ossf-scorecard
             branch: openssf-scorecard-report-updated
             update-pull-request-title-and-body: true
